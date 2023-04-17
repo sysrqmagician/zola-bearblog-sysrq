@@ -74,5 +74,5 @@ A special thank you goes out to [Herman](https://herman.bearblog.dev), for creat
 [MIT License](http://en.wikipedia.org/wiki/MIT_License) © [Alan Pearce](https://www.alanpearce.eu/)
 
 [zola-setup-guide]: https://www.getzola.org/documentation/getting-started/installation/
-[light-screenshot]: https://raw.githubusercontent.com/janraasch/zola-bearblog/master/images/screenshot.png
-[dark-screenshot]: https://raw.githubusercontent.com/janraasch/zola-bearblog/master/images/screenshot-dark.png
+[light-screenshot]: https://codeberg.org/alanpearce/zola-bearblog/raw/branch/main/images/screenshot.png
+[dark-screenshot]: https://codeberg.org/alanpearce/zola-bearblog/raw/branch/main/images/screenshot-dark.png
