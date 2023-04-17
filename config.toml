@@ -1,5 +1,5 @@
 title = "Zola ʕ•ᴥ•ʔ Bear Blog"
-base_url = "https://codeberg.org/alanpearce/zola-bearblog"
+base_url = "https://alanpearce.codeberg.page/zola-bearblog"
 description = ""
 
 # Whether to automatically compile all Sass files in the sass directory
