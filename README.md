@@ -34,6 +34,24 @@ Please check out the included [config.toml](https://codeberg.org/alanpearce/zola
 
 ## Content & structure
 
+### Menu
+
+Create an array in `extra` with a key of `main_menu`. `url` is passed to [`get_url`](https://www.getzola.org/documentation/templates/overview/#get-url)
+
+```toml
+[[extra.main_menu]]
+name = "Bear"
+url = "@/bear.md"
+
+[[extra.main_menu]]
+name = "Zola"
+url = "@/zola.md"
+
+[[extra.main_menu]]
+name = "Blog"
+url = "@/blog/_index.md"
+```
+
 ### Adding / editing content
 
 #### Index-Page
