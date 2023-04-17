@@ -1,0 +1,6 @@
+<a href="{{ config.base_url }}">Home</a>
+{%- if config.extra.main_menu %}
+{%- for item in config.extra.main_menu %}
+<a href="{{ get_url(path=item.url )}}">{{ item.name }}</a>
+{%- endfor %}
+{%- endif %}
