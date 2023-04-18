@@ -12,7 +12,7 @@ For a quick cheatsheet, check out [https://simplemde.com/markdown-guide](https:/
 
 ---
 
-This article offers a sample of basic Markdown syntax that can be used in Hugo content files, also it shows whether basic HTML elements are decorated with CSS in a Hugo theme.
+This article offers a sample of basic Markdown syntax that can be used in Zola content files, also it shows whether basic HTML elements are decorated with CSS in a Zola theme.
 <!--more-->
 
 ## Headings
