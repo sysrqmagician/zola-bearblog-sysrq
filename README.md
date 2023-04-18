@@ -11,8 +11,10 @@ For a current & working demo of this theme, please check out https://alanpearce.
 ## Screenshots
 
 ⬜️ [Light][light-screenshot]
+![light mode screenshot][light-screenshot]
 
 ⬛️ [Dark][dark-screenshot]
+![dark mode screenshot][dark-screenshot]
 
 When the user's browser is running »dark mode«, the dark color scheme will be used automatically. The default is the light/white color scheme. Check out the [`style.html`](https://codeberg.org/alanpearce/zola-bearblog/src/branch/main/templates/style.html)-file for the implementation.
 
