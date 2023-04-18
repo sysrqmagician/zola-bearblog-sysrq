@@ -14,7 +14,7 @@
       <span>
         <i>
           <time datetime='{{ page.date | date(format='%+') }}' pubdate>
-            {{ page.date | date(format="%d %b, %Y") }}
+            {{ page.date | date(format=config.extra.date_format) }}
           </time>
         </i>
       </span>

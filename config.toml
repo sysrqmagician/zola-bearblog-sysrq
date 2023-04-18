@@ -19,6 +19,7 @@ taxonomies = [
 highlight_code = true
 
 [extra]
+date_format="%d %b, %Y"
 
 [[extra.main_menu]]
 name = "Bear"
