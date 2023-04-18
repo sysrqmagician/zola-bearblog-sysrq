@@ -11,7 +11,7 @@
   {%- if config.generate_feed %}
   {% block rss -%}
   <link rel="alternate" type={% if config.feed_filename == "atom.xml" %}"application/atom+xml"{% else %}"application/rss+xml"{% endif %} title="{{ config.title }}" href="{{ get_url(path=config.feed_filename) | safe }}">
-  {% endblock -%}
+  {%- endblock -%}
   {%- endif %}
   {% include "style.html" ignore missing -%}
   {% include "custom_head.html" ignore missing -%}
