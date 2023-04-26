@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   {% include "favicon.html" ignore missing -%}
   <title>{%- block title %}{{ config.title }}{%- endblock %}</title>
-  {% include "seo_tags.html" ignore missing -%}
+  {% include "seo_tags.html" ignore missing %}
   <meta name="referrer" content="no-referrer-when-downgrade">
   {%- if config.generate_feed %}
   {% block rss -%}

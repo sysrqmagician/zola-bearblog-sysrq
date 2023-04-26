@@ -1,8 +1,6 @@
 {% extends "base.html" %}
 
-{% block title %}
-{{ page.title }} | {{ super() }}
-{% endblock %}
+{% block title %}{{ page.title }} | {{ super() }}{% endblock %}
 
 {% block main %}
   {%- if not page.extra.menu %}
@@ -11,14 +9,14 @@
       <p>
         <i>
           <time datetime='{{ page.date | date(format='%+') }}' pubdate>
-            {{ page.date | date(format=config.extra.date_format) }}
+            {{- page.date | date(format=config.extra.date_format) -}}
           </time>
         </i>
       </p>
     {%- endif %}
   {%- endif %}
   <main>
-    {{ page.content | safe }}
+    {{ page.content | indent | safe }}
   </main>
   <p>
     {%- if page.taxonomies %}
