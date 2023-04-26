@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 
 {% block main %}
-  <content>
+  <main>
     {%- if taxonomy.term %}
       <h3 style="margin-bottom:0">Filtering for "{{ term.name }}"</h3>
       <small>
@@ -26,5 +26,5 @@
         </li>
       {% endfor %}
     </ul>
-  </content>
+  </main>
 {% endblock %}

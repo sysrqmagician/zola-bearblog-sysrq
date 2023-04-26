@@ -16,15 +16,9 @@
   {% include "custom_head.html" ignore missing -%}
 </head>
 <body>
-  <header>
-    {% include "header.html" ignore missing -%}
-  </header>
-  <main>
-    {% block main %}{%- endblock -%}
-  </main>
-  <footer>
-    {% include "footer.html" ignore missing -%}
-  </footer>
+  {% include "header.html" ignore missing -%}
+  {% block main %}{%- endblock -%}
+  {% include "footer.html" ignore missing -%}
   {% include "custom_body.html" ignore missing -%}
 </body>
 </html>

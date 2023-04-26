@@ -17,9 +17,9 @@
       </p>
     {%- endif %}
   {%- endif %}
-  <content>
+  <main>
     {{ page.content | safe }}
-  </content>
+  </main>
   <p>
     {%- if page.taxonomies %}
       {%- for name, taxon in page.taxonomies %}
