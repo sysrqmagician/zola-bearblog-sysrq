@@ -2,8 +2,6 @@
 title = "Bear"
 +++
 
-# Bear
-
 Website: [https://bearblog.dev](https://bearblog.dev)
 
 There is a website obesity crisis. Bloated websites are full of scripts, ads, and trackers slowing your readers down every time they try to read your well-crafted content.
