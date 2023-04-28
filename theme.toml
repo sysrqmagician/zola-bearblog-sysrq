@@ -1,7 +1,7 @@
 name = "Bear"
 description = "Bear blog theme"
 license = "MIT"
-homepage = "https://codeberg.org/alanpearce/zola/bearblog"
+homepage = "https://codeberg.org/alanpearce/zola-bearblog"
 # The minimum version of Zola required
 min_version = "0.4.0"
 # An optional live demo URL
