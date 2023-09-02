@@ -32,6 +32,12 @@ Then, adjust the `config.toml` as detailed below.
 
 For more information, read the official [setup guide][zola-setup-guide] of Zola.
 
+Alternatively, you can quickly deploy a copy of the theme site to Netlify using this button:
+
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://gitlab.com/alanpearce/zola-bearblog)
+
+(Note that this method makes it harder to keep up-to-date with theme updates, which might be necessary for newer versions of Zola.)
+
 ## Adjust configuration / config.toml
 
 Please check out the included [config.toml](https://codeberg.org/alanpearce/zola-bearblog/src/branch/main/config.toml)
