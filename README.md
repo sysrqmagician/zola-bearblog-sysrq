@@ -8,7 +8,7 @@
 
 ## Demo
 
-For a current & working demo of this theme, please check out <https://alanpearce.codeberg.page/zola-bearblog/> 🎯.
+For a current & working demo of this theme, please check out <https://zola-bearblog.netlify.app/> 🎯.
 
 ## Screenshots
 
