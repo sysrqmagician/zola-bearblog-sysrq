@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="{{ lang | default(value="en-US" ) }}">
 <head>
+  {% include "security_tags.html" ignore missing %}
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   {% include "favicon.html" ignore missing -%}
