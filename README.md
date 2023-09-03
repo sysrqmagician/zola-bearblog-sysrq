@@ -10,13 +10,9 @@
 
 For a current & working demo of this theme, please check out <https://zola-bearblog.netlify.app/> 🎯.
 
-## Screenshots
+## Screenshot
 
-⬜️ [Light][light-screenshot]
-![light mode screenshot][light-screenshot]
-
-⬛️ [Dark][dark-screenshot]
-![dark mode screenshot][dark-screenshot]
+![Screenshot][screenshot]
 
 When the user's browser is running »dark mode«, the dark color scheme will be used automatically. The default is the light/white color scheme. Check out the [`style.html`](https://codeberg.org/alanpearce/zola-bearblog/src/branch/main/templates/style.html)-file for the implementation.
 
@@ -84,5 +80,4 @@ A special thank you goes out to [Herman](https://herman.bearblog.dev), for creat
 [MIT License](http://en.wikipedia.org/wiki/MIT_License) © [Alan Pearce](https://www.alanpearce.eu/)
 
 [zola-setup-guide]: https://www.getzola.org/documentation/getting-started/installation/
-[light-screenshot]: https://codeberg.org/alanpearce/zola-bearblog/raw/branch/main/screenshot.png
-[dark-screenshot]: https://codeberg.org/alanpearce/zola-bearblog/raw/branch/main/screenshot-dark.png
+[screenshot]: https://codeberg.org/alanpearce/zola-bearblog/raw/branch/main/screenshot.png
