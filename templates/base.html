@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html lang="{{ lang | default(value="en-US" ) }}">
 <head>
-  {% include "security_tags.html" ignore missing %}
+  {%- if config.webserver_sends_csp_headers %}
+  {%- include "security_tags.html" ignore missing %}
+  {%- endif %}
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   {% include "favicon.html" ignore missing -%}
@@ -13,7 +15,9 @@
   <link rel="alternate" type={% if config.feed_filename == "atom.xml" %}"application/atom+xml"{% else %}"application/rss+xml"{% endif %} title="{{ config.title }}" href="{{ get_url(path=config.feed_filename) | safe }}">
   {%- endblock -%}
   {%- endif %}
-  {% include "style.html" ignore missing -%}
+  <style>
+  {%- include "style.css.html" ignore missing -%}
+  </style>
   {% include "custom_head.html" ignore missing -%}
 </head>
 <body>

@@ -13,6 +13,7 @@ demo = "https://zola-bearblog.netlify.app/"
 # Use snake_casing to be consistent with the rest of Zola
 [extra]
 date_format="%d %b, %Y"
+webserver_sends_csp_headers=false
 
 [author]
 name = "Alan Pearce"
