@@ -1,5 +1,5 @@
 title = "Zola ʕ•ᴥ•ʔ Bear Blog"
-base_url = "https://alanpearce.codeberg.page/zola-bearblog"
+base_url = "https://zola-bearblog.netlify.app/"
 description = "A Zola-theme based on Bear Blog."
 
 # Whether to automatically compile all Sass files in the sass directory
