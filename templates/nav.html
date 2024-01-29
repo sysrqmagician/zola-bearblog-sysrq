@@ -4,7 +4,7 @@
     {%- if item.url is matching("https?://") %}
       <a href="{{ item.url }}">{{ item.name }}</a>
     {%- else %}
-      <a href="{{ get_url(path=item.url )}}">{{ item.name }}</a>
+      <a href="{{ get_url(path=item.url, lang=lang )}}">{{ item.name }}</a>
     {%- endif %}
   {%- endfor %}
 {%- endif -%}
