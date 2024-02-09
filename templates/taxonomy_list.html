@@ -2,6 +2,7 @@
 
 {% block main %}
   <main>
+    <h3 style="margin-bottom:0">{{ taxonomy.name | capitalize }}</h3>
     <small>
       <div>
         {% set tags = get_taxonomy(kind="tags") %}
