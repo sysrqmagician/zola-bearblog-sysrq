@@ -2,7 +2,7 @@
 
 {% block main %}
   <main>
-    {%- if taxonomy.term %}
+    {%- if term %}
       <h3 style="margin-bottom:0">Filtering for "{{ term.name }}"</h3>
       <small>
         <a href="{{ get_url(path="@/blog/_index.md", lang=lang) }}">Remove filter</a>
