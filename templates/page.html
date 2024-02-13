@@ -23,7 +23,7 @@
       {%- for name, taxon in page.taxonomies %}
         {{ name | capitalize }}:
         {%- for item in taxon %}
-          <a href="{{ get_taxonomy_url(kind=name, name=item) }}">#{{ item }}</a>
+          <a href="{{ get_taxonomy_url(kind=name, name=item, lang=lang) }}">#{{ item }}</a>
         {%- endfor %}
       {%- endfor %}
     {%- endif %}
