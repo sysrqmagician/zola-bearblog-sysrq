@@ -13,6 +13,29 @@ taxonomies = [
   {name = "tags", feed = true},
 ]
 
+default_language = "en"
+
+[translations]
+no_posts = "No posts yet"
+remove_filter = "Remove filter"
+filtering_for = "Filtering for"
+made_with = "Made with"
+
+[languages.de]
+title = "Zola ʕ•ᴥ•ʔ Bear Blog"
+description = "Ein Zola-theme basiert auf Bear Blog."
+
+taxonomies = [
+  {name = "categories", feed = true},
+  {name = "tags", feed = true},
+]
+
+[languages.de.translations]
+no_posts = "Keine Einträge"
+remove_filter = "Filter entfernen"
+filtering_for = "Filtern nach"
+made_with = "Erstellt mit"
+
 [markdown]
 # Whether to do syntax highlighting
 # Theme can be customised by setting the `highlight_theme` variable to a theme supported by Zola
@@ -23,17 +46,21 @@ date_format="%d %b, %Y"
 webserver_sends_csp_headers=true
 
 [[extra.main_menu]]
-name = "Home"
+name_en = "Home"
+name_de = "Startseite"
 url = "/"
 
 [[extra.main_menu]]
-name = "Bear"
+name_en = "Bear"
+name_de = "Bear"
 url = "@/bear.md"
 
 [[extra.main_menu]]
-name = "Zola"
+name_en = "Zola"
+name_de = "Zola"
 url = "@/zola.md"
 
 [[extra.main_menu]]
-name = "Blog"
+name_en = "Blog"
+name_de = "Blog"
 url = "@/blog/_index.md"

@@ -1,9 +1,16 @@
+{% set current_lang = config.default_language %}
+{% if page %}
+  {% set current_lang = page.lang %}
+{% elif section %}
+  {% set current_lang = section.lang %}
+{% endif %}
 {%- if config.extra.main_menu %}
   {%- for item in config.extra.main_menu %}
+    {% set language_key = 'name_' ~ current_lang %}
     {%- if item.url is matching("https?://") %}
-      <a href="{{ item.url }}">{{ item.name }}</a>
+      <a href="{{ item.url }}">{{ item[language_key] }}</a>
     {%- else %}
-      <a href="{{ get_url(path=item.url, lang=lang )}}">{{ item.name }}</a>
+      <a href="{{ get_url(path=item.url, lang=lang )}}">{{ item[language_key] }}</a>
     {%- endif %}
   {%- endfor %}
 {%- endif -%}
