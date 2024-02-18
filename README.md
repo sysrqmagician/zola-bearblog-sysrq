@@ -46,6 +46,10 @@ Create an array in `extra` with a key of `main_menu`. `url` is passed to [`get_u
 
 ```toml
 [[extra.main_menu]]
+name = "Home"
+url = "/"
+
+[[extra.main_menu]]
 name = "Bear"
 url = "@/bear.md"
 

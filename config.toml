@@ -23,6 +23,10 @@ date_format="%d %b, %Y"
 webserver_sends_csp_headers=true
 
 [[extra.main_menu]]
+name = "Home"
+url = "/"
+
+[[extra.main_menu]]
 name = "Bear"
 url = "@/bear.md"
 
