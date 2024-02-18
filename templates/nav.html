@@ -7,10 +7,15 @@
 {%- if config.extra.main_menu %}
   {%- for item in config.extra.main_menu %}
     {% set language_key = 'name_' ~ current_lang %}
+    {% if current_lang == config.default_language %}
+      {% set title = item | get(key=language_key, default=item.name) %}
+    {% else %}
+      {% set title = item[language_key] %}
+    {% endif %}
     {%- if item.url is matching("https?://") %}
-      <a href="{{ item.url }}">{{ item[language_key] }}</a>
+      <a href="{{ item.url }}">{{ title }}</a>
     {%- else %}
-      <a href="{{ get_url(path=item.url, lang=lang )}}">{{ item[language_key] }}</a>
+      <a href="{{ get_url(path=item.url, lang=lang )}}">{{ title }}</a>
     {%- endif %}
   {%- endfor %}
 {%- endif -%}

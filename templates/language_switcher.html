@@ -1,0 +1,11 @@
+{% if config.extra.language_switcher %}
+  <nav>
+    {%- for tr in config.extra.translations %}
+      {%- if tr.code == lang %}
+        <strong>{{ tr.name }}</strong>
+      {%- else %}
+        <a href="{{ get_url(path="/", lang=tr.code) }}">{{ tr.name }}</a>
+      {%- endif %}
+    {%- endfor %}
+  </nav>
+{% endif %}

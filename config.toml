@@ -44,23 +44,29 @@ highlight_code = true
 [extra]
 date_format="%d %b, %Y"
 webserver_sends_csp_headers=true
+language_switcher=true
+
+translations = [
+  { code="en", name="English" },
+  { code="de", name="Deutsch" },
+]
 
 [[extra.main_menu]]
-name_en = "Home"
+name = "Home"
 name_de = "Startseite"
 url = "/"
 
 [[extra.main_menu]]
-name_en = "Bear"
+name = "Bear"
 name_de = "Bear"
 url = "@/bear.md"
 
 [[extra.main_menu]]
-name_en = "Zola"
+name = "Zola"
 name_de = "Zola"
 url = "@/zola.md"
 
 [[extra.main_menu]]
-name_en = "Blog"
+name = "Blog"
 name_de = "Blog"
 url = "@/blog/_index.md"
