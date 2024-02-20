@@ -1,15 +1,11 @@
 {% if config.extra.language_switcher %}
   <nav>
-    {%- if current_path %}
-      {%- set language_agnostic_path=current_path | replace(from='/' ~ lang ~ '/', to = '/') | trim_start_matches(pat = '/')  -%}
-    {%- endif %}
+    {%- set language_agnostic_path = current_path | default(value="/") | replace(from='/' ~ lang ~ '/', to = '/') | trim_start_matches(pat = '/') -%}
     {%- for tr in config.extra.translations %}
       {%- if tr.code == lang %}
         <strong>{{ tr.name }}</strong>
       {%- else %}
-        {%- if language_agnostic_path %}
-            <a href="{{ get_url(path=language_agnostic_path, lang=tr.code) }}">{{ tr.name }}</a>
-        {%- endif %}
+          <a href="{{ get_url(path=language_agnostic_path, lang=tr.code) }}">{{ tr.name }}</a>
       {%- endif %}
     {%- endfor %}
   </nav>
