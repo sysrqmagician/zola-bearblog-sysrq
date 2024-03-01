@@ -5,7 +5,7 @@
     {%- if term %}
       <h3 class="filter">Filtering for "{{ term.name }}"</h3>
       <small>
-        <a href="{{ get_url(path="@/blog/_index.md", lang=lang) }}">Remove filter</a>
+        <a href="{{ get_url(path="@/blog/_index.md", lang=lang) }}">{{ trans(key="remove_filter", lang=lang) }}</a>
       </small>
     {%- endif %}
     <ul class="blog-posts">
