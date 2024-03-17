@@ -42,7 +42,7 @@ made_with = "Erstellt mit"
 highlight_code = true
 
 [extra]
-date_format="%d %b, %Y"
+date_format="%Y-%m-%d"
 webserver_sends_csp_headers=true
 language_switcher=true
 
