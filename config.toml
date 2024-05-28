@@ -9,8 +9,8 @@ compile_sass = false
 build_search_index = false
 
 taxonomies = [
-  {name = "categories", feed = true},
-  {name = "tags", feed = true},
+  { name = "categories", feed = true },
+  { name = "tags", feed = true },
 ]
 
 default_language = "en"
@@ -26,8 +26,8 @@ title = "Zola ʕ•ᴥ•ʔ Bear Blog"
 description = "Ein Zola-theme basiert auf Bear Blog."
 
 taxonomies = [
-  {name = "categories", feed = true},
-  {name = "tags", feed = true},
+  { name = "categories", feed = true },
+  { name = "tags", feed = true },
 ]
 
 [languages.de.translations]
@@ -42,18 +42,18 @@ made_with = "Erstellt mit"
 highlight_code = true
 
 [extra]
-date_format="%Y-%m-%d"
-webserver_sends_csp_headers=true
-language_switcher=true
+date_format = "%Y-%m-%d"
+webserver_sends_csp_headers = true
+language_switcher = true
 translations = [
-  { code="en", name="English" },
-  { code="de", name="Deutsch" },
+  { code = "en", name = "English" },
+  { code = "de", name = "Deutsch" },
 ]
 
 [extra.table_of_contents]
-show=true
-max_level=2
-visible_on_load=true
+show = true
+max_level = 2
+visible_on_load = true
 
 [[extra.main_menu]]
 name = "Home"
