@@ -18,7 +18,7 @@
   {%- endif %}
   {%- if config.extra.table_of_contents.show and not page.extra.hide_table_of_contents and page.toc %}
     <details {%if config.extra.table_of_contents.visible_on_load %}open{% endif %}>
-      <summary>Table of Contents</summary>
+      <summary>{{ trans(key="table_of_contents", lang=lang) }}</summary>
       {{ macros::table_of_contents(toc=page.toc, max_level=config.extra.table_of_contents.max_level) }}
     </details>
   {%- endif %}
