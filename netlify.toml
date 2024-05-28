@@ -24,4 +24,12 @@ X-Content-Type-Options = "nosniff"
 X-XSS-Protection = "1; mode=block"
 Referrer-Policy = "strict-origin-when-cross-origin"
 Strict-Transport-Security = "max-age=63072000; includeSubdomains"
+# To update the style-src value, run one of the following commands:
+# linux (coreutils)
+# cksum --algorithm sha256 --base64 < templates/style.css.html | cut -d' ' -f 4
+# macOS (should also work on linux if xxd is installed)
+# shasum --algorithm 256 templates/style.css.html | cut -d' ' -f 1 | xxd -r -p | base64
+# if nothing else works
+# openssl dgst -sha256 -binary < templates/style.css.html | openssl enc -base64
+# and paste the output after sha256-
 Content-Security-Policy = "default-src 'none'; img-src 'self'; object-src 'none'; script-src 'none'; style-src 'sha256-KOMZEackHZgE4VhODEG7gEiJLdQZogO6BfMk+c0NWoM='; form-action 'none'; base-uri 'self'; frame-ancestors 'none'"
