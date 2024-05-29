@@ -9,7 +9,7 @@
   {% include "favicon.html" ignore missing -%}
   <title>{%- block title %}{{ config.title }}{%- endblock %}</title>
   {% include "seo_tags.html" ignore missing -%}
-  <meta name="referrer" content="no-referrer-when-downgrade">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
   {%- if config.generate_feed %}
   {% block rss -%}
   <link rel="alternate" type={% if config.feed_filename == "atom.xml" %}"application/atom+xml"{% else %}"application/rss+xml"{% endif %} title="{{ config.title }}" href="{{ get_url(path=config.feed_filename) | safe }}">
