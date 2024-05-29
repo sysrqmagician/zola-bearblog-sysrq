@@ -4,7 +4,7 @@
 {% block title %}{{ page.title }} | {{ super() }}{% endblock %}
 
 {% block main %}
-  {%- if not page.extra.menu %}
+  {%- if not page.extra.menu -%}
     <h1>{{ page.title }}</h1>
     {%- if page.date %}
       <p>
@@ -17,9 +17,9 @@
     {%- endif %}
   {%- endif %}
   {%- if config.extra.table_of_contents.show and not page.extra.hide_table_of_contents and page.toc %}
-    <details {%if config.extra.table_of_contents.visible_on_load %}open{% endif %}>
+    <details {% if config.extra.table_of_contents.visible_on_load %}open{% endif %}>
       <summary>{{ trans(key="table_of_contents", lang=lang) }}</summary>
-      {{ macros::table_of_contents(toc=page.toc, max_level=config.extra.table_of_contents.max_level) }}
+      {{- macros::table_of_contents(toc=page.toc, max_level=config.extra.table_of_contents.max_level) | indent() | safe() }}
     </details>
   {%- endif %}
   <main>
