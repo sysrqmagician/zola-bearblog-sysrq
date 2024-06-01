@@ -8,7 +8,11 @@
 
 ## Demo
 
-For a current & working demo of this theme, please check out <https://zola-bearblog.netlify.app/> 🎯.
+This theme has multiple demo sites, to provide examples of how to set up deployment
+- [Vercel](https://zola-bearblog.vercel.app/)
+- [Netlify](https://zola-bearblog.netlify.app/)
+- [Gitlab Pages](https://alanpearce.gitlab.io/zola-bearblog)
+- [Cloudflare Pages](https://zola-bearblog.pages.dev/)
 
 ## Screenshot
 
