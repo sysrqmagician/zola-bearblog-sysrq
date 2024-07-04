@@ -25,6 +25,10 @@
           "value": "1; mode=block"
         },
         {
+          "key": "Cross-Origin-Resource-Policy",
+          "value": "same-site"
+        },
+        {
           "key": "Referrer-Policy",
           "value": "strict-origin-when-cross-origin"
         },
