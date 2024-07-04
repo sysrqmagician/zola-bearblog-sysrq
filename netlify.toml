@@ -27,5 +27,5 @@ Cross-Origin-Resource-Policy = "same-site"
 Cache-Control = '''
   max-age=300,
   s-maxage=86400,
-  state-while-revalidate
+  stale-while-revalidate
 '''

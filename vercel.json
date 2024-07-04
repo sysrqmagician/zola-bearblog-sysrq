@@ -42,7 +42,7 @@
         },
         {
           "key": "Cache-Control",
-          "value": "max-age=300, s-maxage=86400, state-while-revalidate"
+          "value": "max-age=300, s-maxage=86400, stale-while-revalidate"
         }
       ]
     }
