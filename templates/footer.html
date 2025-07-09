@@ -4,16 +4,10 @@
   {%- endif %}
   {%- if config.extra.footer_menu %}
     {%- for item in config.extra.footer_menu %}
-      {%- if current_lang == config.default_language %}
-        {%- set title = item.name %}
-      {%- else %}
-        {%- set language_key = 'name_' ~ current_lang %}
-        {%- set title = item[language_key] %}
-      {%- endif %}
       {%- if item.url is matching("https?://") %}
-        <a href="{{ item.url }}">{{ title }}</a>
+        <a href="{{ item.url }}">{{ item.name }}</a>
       {%- else %}
-        <a href="{{ get_url(path=item.url, lang=lang )}}">{{ title }}</a>
+        <a href="{{ get_url(path=item.url, lang=lang )}}">{{ item.name }}</a>
       {%- endif %}
     {%- endfor %}
   {%- endif -%}
