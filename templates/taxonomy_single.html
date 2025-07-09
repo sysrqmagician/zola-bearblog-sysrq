@@ -3,7 +3,7 @@
 {%- block main -%}
   <main>
     {%- if term %}
-      <h3 class="filter">Usages of <code>{{ term.name | capitalize }}</code></h3>
+      <h3 class="filter">Usages of <code>{{ taxonomy.name | capitalize }}::{{ term.name | capitalize }}</code></h3>
       <small>
         <a href="{{ get_url(path="@/blog/_index.md", lang=lang) }}">{{ trans(key="remove_filter", lang=lang) }}</a>
       </small>

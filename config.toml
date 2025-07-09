@@ -10,6 +10,7 @@ build_search_index = false
 
 taxonomies = [
   { name = "tag", feed = true },
+  { name = "kind", feed = true },
 ]
 
 default_language = "en"
