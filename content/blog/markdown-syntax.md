@@ -2,6 +2,11 @@
 title = "Markdown Syntax Guide"
 date = "2020-01-03"
 description = "Sample article showcasing basic Markdown syntax and formatting for HTML elements."
+
+taxonomies.kind = [
+    "cheatsheet",
+]
+
 taxonomies.tag = [
     "markdown",
     "syntax",

@@ -8,6 +8,7 @@
         <a href="{{ get_url(path="@/blog/_index.md", lang=lang) }}">{{ trans(key="remove_filter", lang=lang) }}</a>
       </small>
     {%- endif %}
+
     <ul class="blog-posts">
       {%- for page in section.pages %}
         <li>
@@ -24,11 +25,16 @@
         <li>{{ trans(key="no_posts", lang=lang) }}</li>
       {%- endfor -%}
     </ul>
-    <div class="tags">
-      {%- set tags = get_taxonomy(kind="kind", lang=lang) %}
-      {%- for post in tags.items %}
-        <a href="{{ post.permalink }}">kind::{{ post.name | capitalize }}</a>&nbsp;
+
+    {%- if section.extra.list_taxonomies %}
+      {%- for taxonomy_name in section.extra.list_taxonomies %}
+      <div class="tags">
+        {%- set tags = get_taxonomy(kind=taxonomy_name, lang=lang) %}
+        {%- for post in tags.items %}
+        <a href="{{ post.permalink }}">{{ taxonomy_name | capitalize }}::{{ post.name | capitalize }}</a>&nbsp;
+        {%- endfor %}
+      </div>
       {%- endfor %}
-    </div>
+    {% endif %}
   </main>
 {% endblock %}
