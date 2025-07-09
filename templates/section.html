@@ -27,6 +27,7 @@
     </ul>
 
     {%- if section.extra.list_taxonomies %}
+      <hr>
       {%- for taxonomy_name in section.extra.list_taxonomies %}
       <div class="tags">
         {%- set tags = get_taxonomy(kind=taxonomy_name, lang=lang) %}
