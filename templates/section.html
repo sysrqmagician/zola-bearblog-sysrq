@@ -31,8 +31,8 @@
       {%- for taxonomy_name in section.extra.list_taxonomies %}
       <div class="tags">
         {%- set tags = get_taxonomy(kind=taxonomy_name, lang=lang) %}
-        {%- for post in tags.items %}
-        <a href="{{ post.permalink }}">{{ taxonomy_name | capitalize }}::{{ post.name | capitalize }}</a>&nbsp;
+        {%- for term in tags.items %}
+        <a href="{{ term.permalink }}">{{ taxonomy_name | capitalize }}::{{ term.name | capitalize }}</a>&nbsp;
         {%- endfor %}
       </div>
       {%- endfor %}
