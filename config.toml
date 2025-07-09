@@ -9,8 +9,7 @@ compile_sass = false
 build_search_index = false
 
 taxonomies = [
-  { name = "categories", feed = true },
-  { name = "tags", feed = true },
+  { name = "tag", feed = true },
 ]
 
 default_language = "en"
@@ -24,24 +23,6 @@ table_of_contents = "Table of contents"
 language = "language"
 site = "site"
 
-[languages.de]
-title = "Zola ʕ•ᴥ•ʔ Bear Blog"
-description = "Ein Zola-theme basiert auf Bear Blog."
-
-taxonomies = [
-  { name = "categories", feed = true },
-  { name = "tags", feed = true },
-]
-
-[languages.de.translations]
-no_posts = "Keine Einträge"
-remove_filter = "Filter entfernen"
-filtering_for = "Filtern nach"
-made_with = "Erstellt mit"
-table_of_contents = "Inhaltsverzeichnis"
-language = "Sprache"
-site = "Site"
-
 [markdown]
 # Whether to do syntax highlighting
 # Theme can be customised by setting the `highlight_theme` variable to a theme supported by Zola
@@ -49,11 +30,10 @@ highlight_code = false
 
 [extra]
 date_format = "%Y-%m-%d"
+hide_made_with_line = true
 webserver_sends_csp_headers = true
-language_switcher = true
 translations = [
   { code = "en", name = "English" },
-  { code = "de", name = "Deutsch" },
 ]
 
 [extra.table_of_contents]
@@ -63,20 +43,16 @@ visible_on_load = true
 
 [[extra.main_menu]]
 name = "Home"
-name_de = "Startseite"
 url = "@/_index.md"
 
 [[extra.main_menu]]
 name = "Bear"
-name_de = "Bear"
 url = "@/bear.md"
 
 [[extra.main_menu]]
 name = "Zola"
-name_de = "Zola"
 url = "@/zola.md"
 
 [[extra.main_menu]]
 name = "Blog"
-name_de = "Blog"
 url = "@/blog/_index.md"

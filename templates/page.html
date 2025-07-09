@@ -5,36 +5,43 @@
 
 {% block main %}
   {%- if not page.extra.menu -%}
-    <h1>{{ page.title }}</h1>
+    <h1 class="pagetitle">{{ page.title }}</h1>
+
+    <div class="below_title">
+    {%- if page.taxonomies %}
+    <span class="tagline">
+      {%- for name, taxon in page.taxonomies %}
+        {%- for item in taxon %}
+        <a href="{{ get_taxonomy_url(kind=name, name=item, lang=lang) }}">{{name | capitalize}}::{{ item | capitalize }}</a>
+        {%- endfor %}
+      {%- endfor %}
+    </span>
+    {%- endif %}
+
     {%- if page.date %}
-      <p>
-        <i>
-          <time datetime="{{ page.date | date(format='%+') }}" pubdate>
-            {{- page.date | date(format=config.extra.date_format) -}}
-          </time>
-        </i>
+      <p class="date">
+        <time datetime="{{ page.date | date(format='%+') }}" pubdate>
+          {{- page.date | date(format=config.extra.date_format) -}}
+        </time>
       </p>
     {%- endif %}
+    </div>
+
+    <p>{{page.description}} </p>
+    <hr>
   {%- endif %}
+
   {%- if config.extra.table_of_contents.show and not page.extra.hide_table_of_contents and page.toc %}
     <details {% if config.extra.table_of_contents.visible_on_load %}open{% endif %}>
       <summary>{{ trans(key="table_of_contents", lang=lang) }}</summary>
       {{- macros::table_of_contents(toc=page.toc, max_level=config.extra.table_of_contents.max_level) | indent() | safe() }}
     </details>
   {%- endif %}
+
   <main>
     {{ page.content | safe }}
   </main>
-  <p>
-    {%- if page.taxonomies %}
-      {%- for name, taxon in page.taxonomies %}
-        {{ name | capitalize }}:
-        {%- for item in taxon %}
-          <a href="{{ get_taxonomy_url(kind=name, name=item, lang=lang) }}">#{{ item }}</a>
-        {%- endfor %}
-      {%- endfor %}
-    {%- endif %}
-  </p>
+
   {%- if page.extra.enable_comments %}
   <script src="https://giscus.app/client.js"
     data-repo="sysrqmagician/sysrqmagician.dev"

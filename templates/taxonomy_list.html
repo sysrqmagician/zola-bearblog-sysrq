@@ -2,12 +2,18 @@
 
 {% block main %}
   <main>
-    <h1>{{ taxonomy.name | capitalize }}</h1>
-    <div class="tags">
-      {%- set tags = get_taxonomy(kind="tags", lang=lang) %}
+    <br>
+    <code style="display: block;">
+    pub enum {{taxonomy.name | capitalize }} {
+    <ul style="list-style-type: none; padding-left: 20px; margin-top: 0; margin-bottom: 0;">
+      {%- set tags = get_taxonomy(kind="tag", lang=lang) %}
       {%- for post in tags.items %}
-        <a href="{{ post.permalink }}">#{{ post.name }}</a>&nbsp;
+      <li>
+        <a href="{{ post.permalink }}">{{ post.name | capitalize }}</a>&nbsp;
+      </li>
       {%- endfor %}
-    </div>
+    </ul>
+    }
+    </code>
   </main>
 {% endblock %}
