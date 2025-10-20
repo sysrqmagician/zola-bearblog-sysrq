@@ -155,10 +155,16 @@
 
   ul.blog-posts li {
     display: flex;
+    flex-wrap: wrap;
   }
 
-  ul.blog-posts li span {
+  ul.blog-posts li span.date {
     flex: 0 0 130px;
+  }
+
+  ul.blog-posts li span.desc {
+    font-size: smaller;
+    padding-left: 2%;
   }
 
   ul.blog-posts li a:visited {

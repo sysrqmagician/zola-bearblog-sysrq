@@ -12,14 +12,16 @@
     <ul class="blog-posts">
       {%- for page in section.pages %}
         <li>
-          <span>
-            <i>
-              <time datetime="{{ page.date | date(format='%+') }}" pubdate>
-                {{ page.date | date(format=config.extra.date_format) }}
-              </time>
-            </i>
-          </span>
-          <a href="{{ page.permalink }}">{{ page.title }}</a>
+            <span class="date">
+              <i>
+                <time datetime="{{ page.date | date(format='%+') }}" pubdate>
+                  {{ page.date | date(format=config.extra.date_format) }}
+                </time>
+              </i>
+            </span>
+            <a href="{{ page.permalink }}">{{ page.title }}</a>
+            <br>
+            <span class="desc">{{ page.description }}</span>
         </li>
         {%- else %}
         <li>{{ trans(key="no_posts", lang=lang) }}</li>
