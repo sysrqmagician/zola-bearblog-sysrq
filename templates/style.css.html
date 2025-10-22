@@ -202,4 +202,15 @@
 
   div.footnote-definition > p {
     display: inline;
+    font-size: x-small;
+  }
+
+  sup.footnote-definition-label {
+    font-size: smaller;
+  }
+  sup.footnote-definition-label::before, sup.footnote-reference::before {
+    content: "[";
+  }
+  sup.footnote-definition-label::after, sup.footnote-reference::after {
+    content: "]";
   }
